@@ -1,0 +1,44 @@
+@import '../../../styles/base.scss';
+
+.auth-nav {
+    display: flex;
+}
+
+.auth-nav__link {
+   position: relative;
+   padding: 10px 0;
+
+   @include font(22px, $fw:500);
+   color: $secondary-text-color;
+
+   transition: color 250ms $timing-function;
+
+   &:first-child {
+       margin-right: 25px;
+   }
+
+   &:hover,
+   &:focus {
+       color: $green;
+   }
+}
+
+.auth-nav__link--active {
+     color: $green;
+
+     &::after {
+         content: '';
+         position: absolute;
+         left: 50%;
+         bottom: 0;
+
+         height: 3px;
+         width: 110%;
+
+         transform: translateX(-50%);
+
+         border-radius: 40%;
+         background-color: #f0f0f0;
+         box-shadow: $shadow-decor-element;
+     }
+}

@@ -1,0 +1,119 @@
+@import '../../styles//base.scss';
+
+.contact {
+    margin: 0 auto;
+    margin-bottom: 70px;
+    
+}
+
+.contact__list {
+    @extend %list;
+    width: 600px;
+    margin: 0 auto;
+    padding: 30px 40px;
+
+    border-radius: 4px;
+    box-shadow: $shadow-section,
+}
+
+.contact__item {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 15px 25px;
+
+    font-size: 16px;
+
+    background: linear-gradient(90deg, #f5f5f5, #fff 25%, #fff 75%, #f5f5f5);
+    
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &::after {
+        position: absolute;
+        content: '';
+        bottom: 0;
+        left: 50%;
+        width: 100%;
+        height: 2px;
+
+        transform: translateX(-50%);
+
+        border-radius: 40%;
+        background-color: #ececec;
+        box-shadow: $shadow-decor-element;
+    }
+
+    &::before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 50%;
+        width: 100%;
+        height: 2px;
+
+        transform: translateX(-50%);
+
+        border-radius: 40%;
+        background-color: #ececec;
+        box-shadow: $shadow-decor-element;
+    }
+}
+
+.contact__btn {
+    @extend %button;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 34px;
+    height: 34px;
+
+    border-radius: 4px;
+    box-shadow: $shadow-btn;
+
+    color: #ffffff;
+    font-size: 14px;
+
+    transition: 250ms $timing-function;
+
+    &:hover,
+    &:focus {
+        box-shadow: $shadow-btn-hover;
+    }
+}
+
+.contact__btn__icon {
+    color: $red;
+    font-size: 16px;
+
+    transition: 250ms $timing-function;
+
+    .contact__btn:hover &,
+    .contact__btn:focus & {
+        color: $red-accent;
+    }
+}
+
+.contact__decor {
+    top: 5px;
+    display: inline-block;
+    margin-left: 15px;
+    margin-right: 15px;
+    height: 20px;
+    width: 2px;
+
+    transform: rotate(30deg);
+
+    border-radius: 20%;
+    background-color: #ececec;
+    box-shadow: $shadow-decor-element;
+
+}
+
+.contact__name {
+    text-transform: capitalize;
+}

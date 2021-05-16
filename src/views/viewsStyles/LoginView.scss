@@ -1,0 +1,92 @@
+@import '../../styles/base.scss';
+
+.log-container {
+    width: 440px;
+    margin: 0 auto;
+    padding: 50px 40px 40px;
+
+    border: none;
+    border-radius: 4px;
+    box-shadow: $shadow-section;
+}
+
+.log-title {
+    margin-bottom: 10px;
+}
+
+.log-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.log-form__label {
+    margin-bottom: 15px;
+
+    @include font(12px, 1.7, 400);
+    color: $secondary-text-color;
+}
+
+.log-form__input-box{
+    position: relative;
+}
+
+.log-form__input {
+    position: relative;
+    width: 100%;
+    padding: 10px 35px;
+
+    background-color: #fafafa;
+    border: 1px solid #f5f5f5;
+    border-radius: 4px;
+    box-shadow: $shadow-input;
+    outline: none;
+
+    @include font(16px, 1.2, 400);
+    color: $main-text-color;
+
+    transition: box-shadow 250ms $timing-function;
+
+    &:focus {
+        border: 1px solid #f5f5f5;
+        box-shadow: $shadow-input-focus;
+    }
+}
+
+.log-form__btn {
+    @extend %button;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 10px 20px;
+
+    background-color:$green;
+    border-radius: 4px;
+    box-shadow: $shadow-btn;
+
+    @include font(16px);
+    color: #fff;
+
+    transition: box-shadow 250ms $timing-function,
+    transform 250ms $timing-function;
+
+    &:hover, 
+    &:focus {
+        box-shadow: $shadow-btn-hover;
+        transform: scale(1.05);
+    }
+}
+
+.log-form__icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    color: $green;
+    font-size: 18px;
+
+    transform: translateY(-50%);
+
+    transition: font-size 250ms $timing-function;
+
+    .log-form__input-box:focus-within & {
+        font-size: 16px;
+    }
+}

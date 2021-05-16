@@ -1,0 +1,43 @@
+@import '../../../styles/base.scss';
+
+.user {
+    display: flex;
+    align-items: center;
+}
+
+.user__name {
+    margin-right: 15px;
+
+    @include font(22px, $fw:500);
+    color: $green;
+}
+
+.user__name-decor {
+    @include font(22px, $fw:400);
+}
+
+.user__btn {
+    @extend %button;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 15px;
+
+    border-radius: 4px;
+    box-shadow: $shadow-btn;
+
+    @include font(16px, $fw:500);
+    color: $secondary-text-color;
+
+    transition: 250ms $timing-function;
+
+    &:hover,
+    &:focus {
+        color: $red-accent;
+        box-shadow: $shadow-btn-hover;
+    }
+}
+
+.user__btn__icon {
+    margin-left: 8px;
+}

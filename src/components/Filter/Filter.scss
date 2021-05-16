@@ -1,0 +1,65 @@
+@import '../../styles/shared.scss';
+
+.find-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.find-form__title {
+    margin-bottom: 30px;
+    font-size: 50px;
+}
+
+.find-form-container {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.find-form__label {
+    margin-right: 20px;
+    @include font(16px, 1.7, 400);
+    color: $secondary-text-color;
+}
+
+.find-form__input-box {
+    position: relative;
+}
+
+.find-form__input {
+    position: relative;
+    width: 350px;
+    padding: 10px 35px;
+
+    background-color: #fafafa;
+    border: 1px solid #f5f5f5;
+    border-radius: 4px;
+    box-shadow: $shadow-input;
+    outline: none;
+
+    @include font(16px, 1.2, 400);
+
+    transition: box-shadow 250ms $timing-function;
+
+    &:focus {
+        box-shadow: $shadow-input-focus;
+    }
+}
+
+.find-form__icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    color: $green;
+    font-size: 18px;
+
+    transform: translateY(-50%);
+
+    transition: font-size 250ms $timing-function;
+
+    .find-form__input-box:focus-within & {
+        font-size: 0.95em;
+    }
+}

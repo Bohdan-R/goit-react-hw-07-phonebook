@@ -1,0 +1,26 @@
+@import '../../styles/base.scss';
+
+.section {
+    width: 1024px;
+    margin: 0 auto;
+    padding: 50px 0px;
+}
+
+.main-box {
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: $shadow-section;
+}
+
+.decorate-element {
+    margin: 0 auto;
+    margin-bottom: 70px;
+    width: 90%;
+    height: 5px;
+    
+    border-radius: 40%;
+    background-color: #ececec;
+    box-shadow: 
+    -3px -3px 5px rgba(255, 255, 255, 1),
+    4px 4px 4px rgba(0, 0, 0, 0.2);
+}
